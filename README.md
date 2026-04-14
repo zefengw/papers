@@ -1,11 +1,3 @@
-# PRD-ENG-26
+# Papers
 
-This repository is for my Production Engineering Hackathon work this weekend.
-
-## Weekend focus
-- Build and iterate quickly on hackathon ideas
-- Ship practical production engineering prototypes
-- Document approach, decisions, and outcomes
-
-## Notes
-This README was updated to reflect active hackathon participation.
+This repository is a collection of the code implementation of the research papers I read :)
