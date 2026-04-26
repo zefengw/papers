@@ -1,0 +1,1 @@
+# Critical Notes\n- CA decoders are the only viable path for real-time decoding at scale.
