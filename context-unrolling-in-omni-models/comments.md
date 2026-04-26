@@ -1,0 +1,1 @@
+# Critical Notes\n- Unrolling solves the 'bottleneck' of interleaved multimodal tokens.
