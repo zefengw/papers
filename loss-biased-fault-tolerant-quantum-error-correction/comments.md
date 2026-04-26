@@ -1,3 +1,1 @@
-# Critical Notes
-
-- Simplified logic targeting core concept.
+# Critical Notes\n- Heralded loss detection is a game changer for neutral atom qubits.

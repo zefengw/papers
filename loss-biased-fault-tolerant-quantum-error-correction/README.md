@@ -1,12 +1,12 @@
-# Loss-biased fault-tolerant quantum error correction
-
-## Metadata
-- **Authors:** Laura Pecorari, et al.
-- **Affiliations:** Griffith University, University of Strasbourg
-- **Source:** [arXiv:2604.21876](https://arxiv.org/abs/2604.21876)
+# Loss-Biased Fault-Tolerant Quantum Error Correction
 
 ## Summary
-Specialized QEC scheme for biased noise/photon loss.
+Investigates the limits of quantum error correction (QEC) in neutral-atom processors where error rates are asymmetric (loss-biased). It shows that hardware-aware QEC cycles can amplify performance by handling specific noise channels (like Rydberg excitation hopping) more effectively than general-purpose decoders.
 
-## Method Details
-Loss-biased syndrome decoder simulation.
+## Key Methods
+- **Loss-Biased Decoding**: Tailoring decoders to handle erasure/loss errors differently from Pauli errors.
+- **Cycle Optimization**: Matching QEC cycle times to hardware-specific decoherence rates.
+- **Rydberg Error Mitigation**: Specifically addressing the dominant noise in neutral-atom platforms.
+
+## References
+Laura Pecorari et al. "Loss-biased fault-tolerant quantum error correction". arXiv:2604.21876, 2026.
