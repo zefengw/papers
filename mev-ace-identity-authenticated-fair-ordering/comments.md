@@ -1,0 +1,1 @@
+# Critical Notes\n- Identity-based systems face Sybil attack challenges.\n- Prover-Controlled MEV mitigation is a significant shift from PBS.
