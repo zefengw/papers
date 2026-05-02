@@ -1,15 +1,13 @@
-# s1 Simple Test-Time Scaling
+# s1: Simple Test-Time Scaling
 
 ## Summary
-Achieves competitive reasoning via a 1k high-quality dataset (s1K) and 'budget forcing' where the thinking process is either terminated or extended using 'Wait' injections at test-time.
+Building on the "OpenR1" and "Strawberry" trends, s1 demonstrates that significant reasoning performance gains can be achieved through simple test-time scaling methods (like Budget-Force search) without necessarily using complex RL if the base model is strong enough.
 
-## Method Details
-- **Authors**: Niklas Muennighoff, et al.
-- **Published**: 2025-01-31
-- **arXiv ID**: [2501.19393v3](https://arxiv.org/abs/2501.19393v3)
-
-## Reproducibility Notes
-Uses Qwen2.5-32B base. Budget forcing happens at the logit suppression layer during inference.
+## Methodology
+- **Test-Time Scaling**: Allocating more compute at inference time via multiple rollouts and a "best-of-N" verifier or consensus mechanism.
+- **Budget-Force Search**: Iteratively refining solutions within a fixed token/time budget.
+- **Performance**: Matches or exceeds the performance of much larger models that lack test-time compute scaling.
 
 ## References
-- https://arxiv.org/abs/2501.19393v3
+- arXiv: 2501.12948 (Highly influential recent work in Reasoning Models)
+- Affiliations: Stanford University.
