@@ -1,0 +1,1 @@
+# Make Your LVLM KV Cache More Lightweight\n\n**ID:** 2605.00789v1\n**Authors:** Xihao Chen, et al.\n\n## Summary\nIntroduced LightKV which reduces vision-token KV cache size by 45-50% using prompt-aware cross-modality message passing.\n
