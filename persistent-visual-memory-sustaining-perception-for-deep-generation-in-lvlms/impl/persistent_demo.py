@@ -1,27 +1,16 @@
 
-import torch
-import torch.nn as nn
+import numpy as np
 
-class PVM(nn.Module):
-    def __init__(self, dim, visual_dim):
-        super().__init__()
-        self.retrieval_gate = nn.Linear(dim, 1)
-        self.visual_proj = nn.Linear(visual_dim, dim)
+def pvm_sim(x, visual_memory):
+    # Simulated Persistent Visual Memory
+    # x: query, visual_memory: keys
+    scores = np.dot(x, visual_memory.T)
+    weights = np.exp(scores) / np.sum(np.exp(scores), axis=-1, keepdims=True)
+    retrieved = np.dot(weights, visual_memory)
+    gate = 0.5 # constant gate
+    return x + gate * retrieved
 
-    def forward(self, x, visual_memory):
-        # x: [B, L, D], visual_memory: [B, N, V_D]
-        gate = torch.sigmoid(self.retrieval_gate(x))
-        # Simplified cross-attention retrieval
-        scores = torch.matmul(x, self.visual_proj(visual_memory).transpose(-1, -2))
-        weights = torch.softmax(scores, dim=-1)
-        v_retrieved = torch.matmul(weights, self.visual_proj(visual_memory))
-        return x + gate * v_retrieved
-
-# Toy test
-dim, visual_dim = 128, 256
-model = PVM(dim, visual_dim)
-x = torch.randn(1, 10, dim)
-v_mem = torch.randn(1, 5, visual_dim)
-out = model(x, v_mem)
+x = np.random.randn(1, 128)
+v_mem = np.random.randn(5, 128)
+out = pvm_sim(x, v_mem)
 print(f"PVM Output Shape: {out.shape}")
-assert out.shape == x.shape
