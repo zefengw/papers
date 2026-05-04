@@ -1,0 +1,1 @@
+# Meritocratic Fairness in Budgeted Combinatorial Multi-armed Bandits via Shapley Values\n\n**ID:** 2605.00762v1\n**Authors:** Shradha Sharma, et al.\n\n## Summary\nIntroduced K-Shapley values for meritocratic fairness in bandits with full-bandit feedback.\n
