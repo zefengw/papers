@@ -1,0 +1,1 @@
+# Persistent Visual Memory: Sustaining Perception for Deep Generation in LVLMs\n\n**ID:** 2605.00814v1\n**Authors:** Siyuan Huang, et al. (Qwen3-VL team)\n\n## Summary\nProposed Persistent Visual Memory (PVM) to solve 'Visual Signal Dilution' in LVLMs by adding a parallel retrieval branch to FFN.\n
