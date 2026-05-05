@@ -1,1 +1,4 @@
-# DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning\n\n## Summary\nDeepSeek-R1 uses Gruppo Reinforcement Learning (GRPO) to incentivize reasoning capabilities in LLMs, introducing a Cold Start SFT step followed by RL with rule-based rewards.\n\n## Reference\narXiv: 2501.12948
+# DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning
+## Summary
+DeepSeek-R1 uses Gruppo Reinforcement Learning (GRPO) to incentivize reasoning capabilities in LLMs, introducing a Cold Start SFT step followed by RL with rule-based rewards.
+## Reference\narXiv: 2501.12948
