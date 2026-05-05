@@ -1,0 +1,1 @@
+# Exploring the Limit of Outcome Reward for Learning Mathematical Reasoning\n\n## Summary\nThis paper investigates how outcome-based rewards (ORM) compare to process-based rewards (PRM) in training LLMs for complex math tasks.\n\n## Reference\narXiv: 2502.06781

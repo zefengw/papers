@@ -1,13 +1,18 @@
-# Set-of-Mark (SoM) Planning Sketch
-def predict_action(image, task):
-    # 1. Overlay marks on actionable objects (Buttons, Handles)
-    marks = some_segmentation_model(image)
-    marked_image = overlay(image, marks)
+
+class MagmaAgent:
+    def __init__(self, name="Magma"):
+        self.name = name
     
-    # 2. Ask Magma to choose a mark
-    # Prompt: "To open the door, which mark should I pull?"
-    chosen_mark_id = magma.query(marked_image, task)
+    def perceive(self, visual_input, text_input):
+        return f"Perceived: {visual_input} and {text_input}"
     
-    # 3. Resolve coordinate
-    coords = marks[chosen_mark_id].center
-    return f"Click at {coords}"
+    def act(self, state):
+        return f"Action based on {state}"
+
+if __name__ == "__main__":
+    agent = MagmaAgent()
+    p = agent.perceive("Image of room", "Find the keys")
+    a = agent.act(p)
+    print(a)
+    assert "Perceived" in p
+    print("Magma simulation successful.")

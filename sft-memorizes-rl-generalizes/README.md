@@ -1,0 +1,1 @@
+# SFT Memorizes, RL Generalizes\n\n## Summary\nA study showing that Supervised Fine-Tuning leads to memorization of patterns, whereas Reinforcement Learning encourages better generalization in foundation models.\n\n## Reference\narXiv: 2501.17161
