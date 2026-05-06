@@ -1,0 +1,218 @@
+[
+  {
+    "title": "A Closed-Form Adaptive-Landmark Kernel for Certified Point-Cloud and Graph Classification",
+    "summary": "We introduce PALACE (Persistence Adaptive-Landmark Analytic Classification Engine), the data-adaptive companion to PLACE, paying a small cross-validation tier on three knobs (budget, radii, bandwidth; $\\leq 5$ choices each). A cover-theoretic core (Lebesgue-number criterion on the landmark cover) yields four closed-form guarantees. (i) A structural lower distortion bound $\u03bb(\u03c4;\u03bd)$ on $\\mathcal{D}_n$ under cross-diagram non-interference, with a $(D/L)^2$ budget reduction over the uniform grid when diagrams concentrate. (ii) Equal weights $w_k = K^{-1/2}$ maximizing $\u03bb$, and farthest-point-sampling positions $2$-approximating the optimal $k$-center covering radius; both derived from training labels alone, no gradient training. (iii) A kernel-RKHS classification rate $O((k-1)\\sqrt{K}/(\u03b3\\sqrt{m_{\\min}}))$ with binary necessity threshold $m = \u03a9(\\sqrt K/\u03b3)$ from a matching Le Cam lower bound, and a closed-form filtration-selection rule. The kernel-Mahalanobis margin $\\hat\u03c1_{\\mathrm{Mah}}$ is the strongest closed-form ranker across the chemical-graph pool (mean Spearman $\u03c1\\approx +0.60$); the isotropic surrogate $\\hat\u03b3/\\sqrt{K}$ admits a selection-consistency rate, and $\\widehat\u03bb$ from (i) provides an independent data-level signal (positive on COX2 and PTC). (iv) A per-prediction certificate, in non-asymptotic Pinelis and asymptotic Gaussian forms, with no calibration split. Empirically, PALACE is the strongest closed-form diagram-based method on Orbit5k ($91.3 \\pm 1.0\\%$, matching Persformer), leads every diagram-based competitor on COX2 and MUTAG, and is competitive on DHFR (within 1 pp of ECP). At $8\\times$ domain inflation, adaptive placement maintains $94\\%$ while the uniform grid collapses to chance ($25\\%$ on 4-class data).",
+    "link": "http://arxiv.org/abs/2605.04046v1",
+    "published": "2026-05-05T17:59:18Z",
+    "authors": [
+      "Sushovan Majhi",
+      "Atish Mitra",
+      "\u017diga Virk",
+      "Pramita Bagchi"
+    ]
+  },
+  {
+    "title": "Safety and accuracy follow different scaling laws in clinical large language models",
+    "summary": "Clinical LLMs are often scaled by increasing model size, context length, retrieval complexity, or inference-time compute, with the implicit expectation that higher accuracy implies safer behavior. This assumption is incomplete in medicine, where a few confident, high-risk, or evidence-contradicting errors can matter more than average benchmark performance. We introduce SaFE-Scale, a framework for measuring how clinical LLM safety changes across model scale, evidence quality, retrieval strategy, context exposure, and inference-time compute. To instantiate this framework, we introduce RadSaFE-200, a Radiology Safety-Focused Evaluation benchmark of 200 multiple-choice questions with clinician-defined clean evidence, conflict evidence, and option-level labels for high-risk error, unsafe answer, and evidence contradiction. We evaluated 34 locally deployed LLMs across six deployment conditions: closed-book prompting (zero-shot), clean evidence, conflict evidence, standard RAG, agentic RAG, and max-context prompting. Clean evidence produced the strongest improvement, increasing mean accuracy from 73.5% to 94.1%, while reducing high-risk error from 12.0% to 2.6%, contradiction from 12.7% to 2.3%, and dangerous overconfidence from 8.0% to 1.6%. Standard RAG and agentic RAG did not reproduce this safety profile: agentic RAG improved accuracy over standard RAG and reduced contradiction, but high-risk error and dangerous overconfidence remained elevated. Max-context prompting increased latency without closing the safety gap, and additional inference-time compute produced only limited gains. Worst-case analysis showed that clinically consequential errors concentrated in a small subset of questions. Clinical LLM safety is therefore not a passive consequence of scaling, but a deployment property shaped by evidence quality, retrieval design, context construction, and collective failure behavior.",
+    "link": "http://arxiv.org/abs/2605.04039v1",
+    "published": "2026-05-05T17:57:19Z",
+    "authors": [
+      "Sebastian Wind",
+      "Tri-Thien Nguyen",
+      "Jeta Sopa",
+      "Mahshad Lotfinia",
+      "Sebastian Bickelhaup",
+      "Michael Uder",
+      "Harald K\u00f6stler",
+      "Gerhard Wellein",
+      "Sven Nebelung",
+      "Daniel Truhn",
+      "Andreas Maier",
+      "Soroosh Tayebi Arasteh"
+    ]
+  },
+  {
+    "title": "OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories",
+    "summary": "Deep search capabilities have become an indispensable competency for frontier Large Language Model (LLM) agents, yet their development remains dominated by industrial giants. The typical industry recipe involves a highly resource-intensive pipeline spanning pre-training, continual pre-training (CPT), supervised fine-tuning (SFT), and reinforcement learning (RL). In this report, we show that when fueled with informative and high-difficulty trajectories, a simple SFT approach could be surprisingly powerful for training frontier search agents. By introducing three simple data synthesis modifications: scaling knowledge graph size for richer exploration, expanding the tool set size for broader functionality, and strict low-step filtering, we establish a stronger baseline. Trained on merely 10.6k data points, our OpenSeeker-v2 achieves state-of-the-art performance across 4 benchmarks (30B-sized agents with ReAct paradigm): 46.0% on BrowseComp, 58.1% on BrowseComp-ZH, 34.6% on Humanity's Last Exam, and 78.0% on xbench, surpassing even Tongyi DeepResearch trained with heavy CPT+SFT+RL pipeline, which achieves 43.4%, 46.7%, 32.9%, and 75.0%, respectively. Notably, OpenSeeker-v2 represents the first state-of-the-art search agent within its model scale and paradigm to be developed by a purely academic team using only SFT. We are excited to open-source the OpenSeeker-v2 model weights and share our simple yet effective findings to make frontier search agent research more accessible to the community.",
+    "link": "http://arxiv.org/abs/2605.04036v1",
+    "published": "2026-05-05T17:55:25Z",
+    "authors": [
+      "Yuwen Du",
+      "Rui Ye",
+      "Shuo Tang",
+      "Keduan Huang",
+      "Xinyu Zhu",
+      "Yuzhu Cai",
+      "Siheng Chen"
+    ]
+  },
+  {
+    "title": "Large-Scale High-Quality 3D Gaussian Head Reconstruction from Multi-View Captures",
+    "summary": "We propose HeadsUp, a scalable feed-forward method for reconstructing high-quality 3D Gaussian heads from large-scale multi-camera setups. Our method employs an efficient encoder-decoder architecture that compresses input views into a compact latent representation. This latent representation is then decoded into a set of UV-parameterized 3D Gaussians anchored to a neutral head template. This UV representation decouples the number of 3D Gaussians from the number and resolution of input images, enabling training with many high-resolution input views. We train and evaluate our model on an internal dataset with more than 10,000 subjects, which is an order of magnitude larger than existing multi-view human head datasets. HeadsUp achieves state-of-the-art reconstruction quality and generalizes to novel identities without test-time optimization. We extensively analyze the scaling behavior of our model across identities, views, and model capacity, revealing practical insights for quality-compute trade-offs. Finally, we highlight the strength of our latent space by showcasing two downstream applications: generating novel 3D identities and animating the 3D heads with expression blendshapes.",
+    "link": "http://arxiv.org/abs/2605.04035v1",
+    "published": "2026-05-05T17:55:01Z",
+    "authors": [
+      "Evangelos Ntavelis",
+      "Sean Wu",
+      "Mohamad Shahbazi",
+      "Fabio Maninchedda",
+      "Dmitry Kostiaev",
+      "Artem Sevastopolsky",
+      "Vittorio Megaro",
+      "Trevor Phillips",
+      "Alejandro Blumentals",
+      "Shridhar Ravikumar",
+      "Mehak Gupta",
+      "Reinhard Knothe",
+      "Jeronimo Bayer",
+      "Matthias Vestner",
+      "Simon Schaefer",
+      "Thomas Etterlin",
+      "Christian Zimmermann",
+      "Mathias Deschler",
+      "Peter Kaufmann",
+      "Stefan Brugger",
+      "Sebastian Martin",
+      "Brian Amberg",
+      "Tom Runia"
+    ]
+  },
+  {
+    "title": "Redefining AI Red Teaming in the Agentic Era: From Weeks to Hours",
+    "summary": "AI systems are entering critical domains like healthcare, finance, and defense, yet remain vulnerable to adversarial attacks. While AI red teaming is a primary defense, current approaches force operators into manual, library-specific workflows. Operators spend weeks hand-crafting workflows - assembling attacks, transforms, and scorers. When results fall short, workflows must be rebuilt. As a result, operators spend more time constructing workflows than probing targets for security and safety vulnerabilities.   We introduce an AI red teaming agent built on the open-source Dreadnode SDK. The agent creates workflows grounded in 45+ adversarial attacks, 450+ transforms, and 130+ scorers. Operators can probe multi-agent systems, multilingual, and multimodal targets, focusing on what to probe rather than how to implement it.   We make three contributions: 1. Agentic interface. Operators describe goals in natural language via the Dreadnode TUI (Terminal User Interface). The agent handles attack selection, transform composition, execution, and reporting, letting operators focus on red teaming. Weeks compress to hours. 2. Unified framework. A single framework for probing traditional ML models (adversarial examples) and generative AI systems (jailbreaks), removing the need for separate libraries. 3. Llama Scout case study. We red team Meta Llama Scout and achieve an 85% attack success rate with severity up to 1.0, using zero human-developed code",
+    "link": "http://arxiv.org/abs/2605.04019v1",
+    "published": "2026-05-05T17:43:52Z",
+    "authors": [
+      "Raja Sekhar Rao Dheekonda",
+      "Will Pearce",
+      "Nick Landers"
+    ]
+  },
+  {
+    "title": "FTPrimitiveBench: A Benchmark Suite For Logical Computation Under Hardware-Motivated and Biased Noise Models",
+    "summary": "Fault-tolerant quantum computing requires understanding how error-correcting codes perform on diverse physical hardware. This is typically assessed via noisy stabilizer simulation of logical circuits at HPC scale, combined with a noise model that yields a logical error rate for the relevant code distances and depths. The uniform depolarizing model is the standard baseline, but its homogeneous assumptions fail to capture the heterogeneity, asymmetries, and correlations of real devices, where Pauli, measurement, and spatio-temporal errors are not weakly coupled. Yet these same structured features create opportunities for joint code-hardware co-design, motivating noise models that more faithfully reflect target hardware while remaining tractable to simulate.   We introduce FTPrimitiveBench, a systematic benchmarking approach for studying how logical primitives interact with hardware-motivated noise. It supports both custom specifications and representative structured noise families: Pauli bias, measurement bias, and spatial or spatio-temporal non-uniformity -- together with generators for core surface-code Clifford primitives: logical memory, lattice surgery, transversal logical Hadamard, and the logical phase gate via lattice surgery. We find that structured noise affects these primitives in qualitatively distinct ways, with outcomes shaped by the interplay between noise model, primitive, and decoder choice. These results extend memory benchmarks to active logical computation, where the interaction between noise structure and primitive implementation matters. By standardizing the link between noise-model specification and primitive construction, FTPrimitiveBench enables reproducible comparative studies of QEC protocols and decoders, supporting hardware-aware co-design of fault-tolerant architectures. Code: https://github.com/ShuwenKan/FTPrimitiveBench.",
+    "link": "http://arxiv.org/abs/2605.04049v1",
+    "published": "2026-05-05T17:59:59Z",
+    "authors": [
+      "Shuwen Kan",
+      "Adrian Harkness",
+      "Zefan Du",
+      "Rod Rofougaran",
+      "Sean Garner",
+      "Chenxu Liu",
+      "Ying Mao",
+      "Samuel Stein"
+    ]
+  },
+  {
+    "title": "Sequential vs. Simultaneous Entanglement Swapping under Optimal Link-Layer Control",
+    "summary": "Connection-less, packet-switched quantum network architectures distribute entanglement across multi-hop paths through sequential entanglement swapping, in which each node acts on purely local state information. The architectural advantages over the connection-oriented alternative -- simultaneous SWAP-ASAP -- are compelling, but sequential swapping holds partial chains in intermediate buffers between successive swaps, exposing them to memory decoherence in a way simultaneous SWAP-ASAP avoids by design. We present a proof-of-principle study at fixed chain length $n = 4$ in which each elementary link is governed by a fixed reinforcement-learning policy optimizing the secret-key rate of the six-state protocol, leaving the network-layer protocol as the sole independent variable. Sweeping the network-layer memory coherence time $T_c^{\\mathrm{ext}}$ over four orders of magnitude reveals a clear regime structure governed by the dimensionless ratio $T_c^{\\mathrm{ext}}/\u03c4$, where $\u03c4$ is the per-link entanglement heralding latency. Simultaneous SWAP-ASAP delivers a constant rate across the full sweep. Sequential swapping, by contrast, collapses to zero end-to-end deliveries below $T_c^{\\mathrm{ext}}/\u03c4= 25$, and begins recovering at $T_c^{\\mathrm{ext}}/\u03c4= 50$. It remains limited by the simultaneous rate, which it saturates only at the relaxed end of the sweep. These results suggest that the connection-less penalty is a near-term phenomenon tied to present-day memory coherence rather than a fundamental property of sequential swapping.",
+    "link": "http://arxiv.org/abs/2605.04047v1",
+    "published": "2026-05-05T17:59:22Z",
+    "authors": [
+      "Priyam Srivastava",
+      "Akshat R. Sabavat",
+      "Siddharth Jain",
+      "Alan Scheller-Wolf",
+      "Sridhar Tayur",
+      "David Tipper",
+      "Prashant Krishnamurthy",
+      "Amy Babay",
+      "Kaushik P. Seshadreesan"
+    ]
+  },
+  {
+    "title": "Ergotropy Protection via Cavity Detuning in Collective Open Quantum Batteries",
+    "summary": "This study investigates the performance and ergotropy protection of open collective quantum batteries subject to superradiant decay. By employing a passive spectral detuning strategy within an intermediate cavity, an optimal detuning value ($\u0394^*$) is analytically derived and numerically verified to spectrally isolate the system and protect quantum coherence, achieving up to 1088% ergotropy improvement for single qubits and superextensive collective advantage for $N \\ge 3$. Our analysis resolves a \"non-Markovian paradox,\" revealing that maximizing ergotropy does not strictly require non-Markovian memory; rather, suppressing environmental memory via detuning optimally preserves coherence, which serves as the fundamental resource. Survival maps across different environments demonstrate that thermal noise dissipates coherence more severely than telegraph noise. Finally, we establish that collective amplification of the effective coupling ($g_{\\rm eff} = g\\sqrt{N})$ inevitably drives large qubit arrays into the ultra-strong coupling regime, providing a quantitative ceiling $N_{\\rm max}$ on the validity of the Tavis-Cummings description and the current ergotropy protection protocol.",
+    "link": "http://arxiv.org/abs/2605.04042v1",
+    "published": "2026-05-05T17:58:13Z",
+    "authors": [
+      "Tariq Zeyad Jawad"
+    ]
+  },
+  {
+    "title": "Entanglement transitions in translation-invariant tensor networks",
+    "summary": "We study the complexity of approximately contracting translation-invariant tensor networks. The computational cost of row-by-row tensor network contraction, which defines a discrete time evolution governed by a fixed transfer matrix, is associated with the entanglement of the state of a row. By analyzing a family of tensor networks whose transfer matrices interpolate between chaotic Floquet and strongly non-unitary limits, we uncover a transition between volume- and area-law entanglement in states evolved under the transfer matrix. We show that deep in the volume-law phase the spectrum of the transfer matrix in the complex plane consists of a dense ring with a sharp outer edge, reminiscent of behavior identified for non-unitary random matrices. At late times an evolving row state therefore has significant contributions from many eigenvectors with nearly degenerate eigenvalue magnitudes. In the area-law phase, there is instead a distinct leading eigenvalue. Our results establish connections between contraction complexity, spectral properties of the transfer matrix, and purification under non-unitary dynamics.",
+    "link": "http://arxiv.org/abs/2605.04026v1",
+    "published": "2026-05-05T17:50:38Z",
+    "authors": [
+      "Yi-Cheng Wang",
+      "Samuel J. Garratt",
+      "Ehud Altman"
+    ]
+  },
+  {
+    "title": "Fast, accurate, high-resolution simulation of large-scale Fermi-Hubbard models on a digital quantum processor",
+    "summary": "We report experimental digital quantum simulation of the one-dimensional Fermi-Hubbard model on a superconducting quantum processor at a scale beyond the reach of exact statevector simulation and challenging for state-of-the-art tensor-network methods. We encode this problem using up to 120 qubits through an efficient mapping that reduces circuit complexity, and we improve accuracy through error suppression to simulate dynamical evolution using up to 90 Trotter steps. From a vacancy defect introduced in the middle of an $L=31$-site (62-qubit) N\u00e9el initial state, we directly observe spin-charge separation to $t=9$ in natural units using up to 90 Trotter steps, and quantitatively extract velocity ratios $v_c/v_s$ which match classical simulations across a range of model parameters. We then extend experiments to $L=60$ (120 qubits) and long evolution times to $t=6$ using 30 Trotter steps; Quantum-processor outputs agree quantitatively with approximate classical simulations performed using a time-dependent variational principle (TDVP) solver; increasing the TDVP bond dimension through $\u03c7= 4096$ expands the range of evolution times within which agreement has RMSE $\\sim 1\\%$ before the approaches diverge. Owing to the large scale of the simulation and the use of efficient overhead-free error-suppression techniques, for simulated evolution times at the limit of quantum/classical agreement ($t\\gtrsim 5$ in natural hopping units), the wall-clock runtime of the quantum processor is up to $3000\\times$ faster than an optimized TDVP simulation using $\u03c7= 4096$. These results establish contemporary digital quantum processors as a versatile, quantitatively accurate, and competitive platform for the study of fermionic many-body dynamics in regimes where leading classical methods can become prohibitively expensive.",
+    "link": "http://arxiv.org/abs/2605.04025v1",
+    "published": "2026-05-05T17:49:07Z",
+    "authors": [
+      "Gavin S. Hartnett",
+      "Khadijeh Sona Najafi",
+      "Aleksei Khindanov",
+      "Haoran Liao",
+      "Michael Schutzman",
+      "Michael R. Hush",
+      "Michael J. Biercuk",
+      "Yuval Baum"
+    ]
+  },
+  {
+    "title": "Probabilistic-bit Guided CDCL for SAT Solving using Ising Consensus Assumptions",
+    "summary": "Boolean satisfiability (SAT) solvers are widely used in hardware verification, cryptanalysis, automatic test-pattern generation, and side-channel reasoning workflows. Modern conflict-driven clause-learning (CDCL) solvers are highly effective, but satisfiable instances may still require substantial conflict analysis and Boolean propagation before identifying productive regions of the search space. This paper studies a hybrid SAT-solving framework in which a probabilistic-bit (p-bit) Ising sampler proposes high-agreement literals that are passed to CDCL as temporary assumptions. The goal is not to replace CDCL, but to evaluate whether stochastic low-violation samples can reduce CDCL internal search effort while retaining correctness through CDCL fallback. On selected controlled-backbone random 3-SAT benchmarks, the hybrid method reduces median conflicts by 80.8-85.5% and median propagations by 80.2-84.6% relative to pure CDCL. The observed benefit is distribution-sensitive, suggesting that p-bit guidance is effective only for certain instance classes. We further report exploratory machine-learning gates that estimate when hybrid solving is likely to help. On the selected run, a random-forest gate retains 94.8% of hybrid wins, indicating that lightweight gating may help avoid unproductive hybrid calls.",
+    "link": "http://arxiv.org/abs/2605.04033v1",
+    "published": "2026-05-05T17:54:42Z",
+    "authors": [
+      "Melki Bino"
+    ]
+  },
+  {
+    "title": "Redefining AI Red Teaming in the Agentic Era: From Weeks to Hours",
+    "summary": "AI systems are entering critical domains like healthcare, finance, and defense, yet remain vulnerable to adversarial attacks. While AI red teaming is a primary defense, current approaches force operators into manual, library-specific workflows. Operators spend weeks hand-crafting workflows - assembling attacks, transforms, and scorers. When results fall short, workflows must be rebuilt. As a result, operators spend more time constructing workflows than probing targets for security and safety vulnerabilities.   We introduce an AI red teaming agent built on the open-source Dreadnode SDK. The agent creates workflows grounded in 45+ adversarial attacks, 450+ transforms, and 130+ scorers. Operators can probe multi-agent systems, multilingual, and multimodal targets, focusing on what to probe rather than how to implement it.   We make three contributions: 1. Agentic interface. Operators describe goals in natural language via the Dreadnode TUI (Terminal User Interface). The agent handles attack selection, transform composition, execution, and reporting, letting operators focus on red teaming. Weeks compress to hours. 2. Unified framework. A single framework for probing traditional ML models (adversarial examples) and generative AI systems (jailbreaks), removing the need for separate libraries. 3. Llama Scout case study. We red team Meta Llama Scout and achieve an 85% attack success rate with severity up to 1.0, using zero human-developed code",
+    "link": "http://arxiv.org/abs/2605.04019v1",
+    "published": "2026-05-05T17:43:52Z",
+    "authors": [
+      "Raja Sekhar Rao Dheekonda",
+      "Will Pearce",
+      "Nick Landers"
+    ]
+  },
+  {
+    "title": "LIPPEN: A Lightweight In-Place Pointer Encryption Architecture for Pointer Integrity",
+    "summary": "Memory-safety violations in C and C++ programs continue to enable sophisticated exploitation techniques such as control-flow hijacking and data-oriented attacks. Existing hardware defenses either rely on address space layout randomization (ASLR) or attach explicit metadata to pointers to verify their integrity. External metadata schemes provide strong guarantees, but incur additional memory accesses and memory footprint overhead. In-place authentication mechanisms, such as ARM Pointer Authentication (PAC), achieve low overhead at the cost of limited entropy and susceptibility to brute-force and reuse attacks. This paper presents LIPPEN, a hardware-software co-design for full-pointer encryption that provides strong pointer integrity and confidentiality with zero metadata overhead. LIPPEN treats every pointer as an encrypted block, cryptographically binding it to its execution context and decrypting it transparently at dereference time. By re-purposing the entire 64-bit pointer field for encryption rather than preserving raw address bits, LIPPEN maximizes entropy, eliminates the brute-force weaknesses of truncated authentication codes, and maintains binary compatibility with existing PAC-enabled software. We prototype LIPPEN on FPGA using 64-bit RISC-V Rocket and BOOM cores, and evaluate it with microbenchmarks, nbench, and SPEC CPU2017. We compare against both an in-house RISC-V PAC implementation and Apple's PAC on the M1 processor. Across these workloads, LIPPEN provides comprehensive pointer protection with runtime overhead comparable to PAC-based schemes, while incurring negligible area and power overhead. These results show that LIPPEN is a practical design point for deploying strong pointer protection in real processors.",
+    "link": "http://arxiv.org/abs/2605.03974v1",
+    "published": "2026-05-05T16:58:17Z",
+    "authors": [
+      "Erfan Iravani",
+      "Lalit Prasad Peri",
+      "Mohannad Ismail",
+      "Charitha Tumkur Siddalingaradhya",
+      "Changwoo Min",
+      "Elif Bilge Kavun",
+      "Wenjie Xiong"
+    ]
+  },
+  {
+    "title": "Generating Proof-of-Vulnerability Tests to Help Enhance the Security of Complex Software",
+    "summary": "Developers create modern software applications (Apps) on top of third-party libraries (Libs). When library vulnerabilities are reachable through application code, the applications can be vulnerable to software supply chain attacks. Prior work shows that developers often require concrete and executable evidence, i.e., proof-of-vulnerability (PoV) tests, to decide whether a reported dependency vulnerability poses a practical security risk to their application. However, manually crafting such tests is challenging, and existing tool support is insufficient to automate the procedure. To streamline test generation, we created PoVSmith -- a new approach that combines call path analysis, exemplar test, code context, and feedback into multiple prompts to guide a coding agent (i.e., Codex) and a large language model (i.e., GPT) for test generation, execution, and assessment. We evaluated PoVSmith on 33 $\\langle$App, Lib$\\rangle$ Java program pairs, where each App depends on a vulnerable Lib. PoVSmith revealed 158 unique application-level entry points (i.e., public methods) calling vulnerable library APIs; 152 (96\\%) of them were correctly found, together with the call paths properly recognized. With such method call information, PoVSmith generated 152 tests, 84 (55\\%) of which demonstrated feasible ways of attacking Apps by exploiting Lib vulnerabilities. PoVSmith substantially outperforms the state-of-the-art LLM-based approach, as it reduces human involvement while dramatically improving test quality. Our work contributes (1) a novel approach of agent-based test generation, (2) an iterative code refinement process driven by execution feedback, and (3) LLM-based quality assessment grounded in both the test context and execution logs.",
+    "link": "http://arxiv.org/abs/2605.03956v1",
+    "published": "2026-05-05T16:39:29Z",
+    "authors": [
+      "Shravya Kanchi",
+      "Xiaoyan Zang",
+      "Ying Zhang",
+      "Danfeng Yao",
+      "Na Meng"
+    ]
+  },
+  {
+    "title": "MOSAIC-Bench: Measuring Compositional Vulnerability Induction in Coding Agents",
+    "summary": "Coding agents often pass per-prompt safety review yet ship exploitable code when their tasks are decomposed into routine engineering tickets. The challenge is structural: existing safety alignment evaluates overt requests in isolation, leaving models blind to malicious end-states that emerge from sequenced compliance with innocuous-looking requests. We introduce MOSAIC-Bench (Malicious Objectives Sequenced As Innocuous Compliance), a benchmark of 199 three-stage attack chains paired with deterministic exploit oracles on deployed software substrates (10 web-application substrates, 31 CWE classes, 5 programming languages) that treats both exploit ground truth and downstream reviewer protocol as first-class evaluation axes. On this benchmark, nine production coding agents from Anthropic, OpenAI, Google, Moonshot, Zhipu, and Minimax compose innocuous tickets at 53-86% end-to-end ASR with only two refusals across all staged runs. In a matched direct-prompt experiment over four frontier Claude/Codex agents, vulnerable-output rates fall to 0-20.4%: Claude primarily refuses, while Codex primarily hardens rather than emitting the vulnerable implementation - ticket staging silences both defense modes simultaneously. Downstream, code reviewer agents approve 25.8% of these confirmed-vulnerable cumulative diffs as routine PRs, and a full-context implementation protocol closes only 50% of the staged/direct gap, ruling out context fragmentation as the sole explanation. As a deployable but non-adaptive mitigation, reframing the reviewer as an adversarial pentester reduces evasion across the evaluated reviewer subset; pentester framed evasion ranges from 3.0% to 17.6%, and an open-weight Gemma-4-E4B-it reviewer under this framing detects 88.4% of attacks on the dataset with a 4.6% false-positive rate measured on 608 real-world GitHub PRs.",
+    "link": "http://arxiv.org/abs/2605.03952v1",
+    "published": "2026-05-05T16:38:23Z",
+    "authors": [
+      "Jonathan Steinberg",
+      "Oren Gal"
+    ]
+  }
+]
